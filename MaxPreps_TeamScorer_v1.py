@@ -11,7 +11,6 @@ level = 'Varsity'
 year = '21-22'
 URL = f"https://www.maxpreps.com/{state_abbreviation}/{city_name}/{team_name}/basketball/{level}/{year}/schedule"
 
-print(URL)
 raw_data = requests.get(URL)
 html_tree = BeautifulSoup(raw_data.content, 'html.parser')
 
@@ -66,4 +65,4 @@ for link in list_of_links:
     cur_team_name = get_team_name(cur_HTML_tree)
 
     #prints out the basic info gleaned from schedule for each team
-    print([cur_team_record, cur_team_winrate, cur_team_name])
+    #print([cur_team_record, cur_team_winrate, cur_team_name])
